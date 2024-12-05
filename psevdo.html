@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psevdo</title>
+</head>
+<style>
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* ТУТ впереди добавил $$ значки с фиолетовом цвете размер 20пикселнй */
+p::before {
+    content: "$$$$$$"; 
+    color: violet;   
+    font-size: 20px; 
+    margin-right: 5px;
+}
+h1 , h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* тут конце красный цветом # размером 30пиксалей  */
+h1::after{
+    content: "####";
+    color: RED;
+    font-size: 30PX;
+    margin-right: 10PX;
+}
+/* @ тут добавил с зеленом цвете размер 40зч */
+h2::after{
+    content: "@@@@";
+    color: rgb(12, 208, 45);
+    font-size: 40PX;
+    margin-right: 10PX;
+}
+.block{
+    width: 400px;
+    height: 200px;
+    background-color: deeppink;
+    border: 2px solid black;
+   
+}
+/* тут добавил блок с 50процент длиной 10пиксел высотой Радиальные градиенты  изменят цвет по кругу */
+.block::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 10px;
+    background: radial-gradient(circle, red, yellow, green);
+    top: 205px ;
+   
+}
+.block::after {
+    content: " ТЕКСТ ";
+    font-size: 50PX;
+    position: absolute;
+    bottom: 0px;
+    width: 90%;
+    height: 105px;
+    background: linear-gradient(to right, red, yellow);
+}
+/* тут юлок длина 90процент высота 105писелей радиалный грант по линйный правый сначала красный потом желтый */
+</style>
+<body>
+    <p>1. Создайте HTML-документ с несколькими абзацами (`p`).</p>
+    <p>2. Используя псевдоэлемент `::before`, добавьте текст перед каждым абзацем, изменив его цвет и размер.</p>
+     <h1>3. Объясните, как `::after` позволяет добавлять элементы в конец содержимого.</h1>
+     <h2>1. Создайте несколько заголовков (`h1`, `h2`).</h2>
+     <div class="block"></div>
+</body>
+</html>
